@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5BB8E1E5-767C-4A0E-B35B-7B0E897677DF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MySite</RootNamespace>
+    <AssemblyName>MySite</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44379</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomeViewController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web-AdminLogin\adminIndex.html" />
+    <Content Include="Web-AdminLogin\adminStyle.css" />
+    <Content Include="Web-AdminLogin\Login.jpg" />
+    <Content Include="Web-MyWebSite\haşim.jpg" />
+    <Content Include="Web-MyWebSite\index.html" />
+    <Content Include="Web-MyWebSite\photo_2022-11-04_17-49-30.jpg" />
+    <Content Include="Web-MyWebSite\style.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Web-MyWebSite\.git\COMMIT_EDITMSG" />
+    <Content Include="Web-MyWebSite\.git\config" />
+    <Content Include="Web-MyWebSite\.git\description" />
+    <Content Include="Web-MyWebSite\.git\HEAD" />
+    <Content Include="Web-MyWebSite\.git\hooks\applypatch-msg.sample" />
+    <Content Include="Web-MyWebSite\.git\hooks\commit-msg.sample" />
+    <Content Include="Web-MyWebSite\.git\hooks\fsmonitor-watchman.sample" />
+    <Content Include="Web-MyWebSite\.git\hooks\post-update.sample" />
+    <Content Include="Web-MyWebSite\.git\hooks\pre-applypatch.sample" />
+    <Content Include="Web-MyWebSite\.git\hooks\pre-commit.sample" />
+    <Content Include="Web-MyWebSite\.git\hooks\pre-merge-commit.sample" />
+    <Content Include="Web-MyWebSite\.git\hooks\pre-push.sample" />
+    <Content Include="Web-MyWebSite\.git\hooks\pre-rebase.sample" />
+    <Content Include="Web-MyWebSite\.git\hooks\pre-receive.sample" />
+    <Content Include="Web-MyWebSite\.git\hooks\prepare-commit-msg.sample" />
+    <Content Include="Web-MyWebSite\.git\hooks\push-to-checkout.sample" />
+    <Content Include="Web-MyWebSite\.git\hooks\update.sample" />
+    <Content Include="Web-MyWebSite\.git\index" />
+    <Content Include="Web-MyWebSite\.git\info\exclude" />
+    <Content Include="Web-MyWebSite\.git\logs\HEAD" />
+    <Content Include="Web-MyWebSite\.git\logs\refs\heads\Login" />
+    <Content Include="Web-MyWebSite\.git\logs\refs\heads\master" />
+    <Content Include="Web-MyWebSite\.git\logs\refs\remotes\origin\Login" />
+    <Content Include="Web-MyWebSite\.git\logs\refs\remotes\origin\master" />
+    <Content Include="Web-MyWebSite\.git\objects\0a\26a23b2d82368f027f243bc40743f094af95d8" />
+    <Content Include="Web-MyWebSite\.git\objects\1d\3e667d35c1b3ebe15b1dd7696eddbe259a4cdc" />
+    <Content Include="Web-MyWebSite\.git\objects\26\75c94a7da5dbc91293536d83c00ccb07bab6f2" />
+    <Content Include="Web-MyWebSite\.git\objects\52\3e70b287d33373cd2e73d07cd26b8dba3d3bcc" />
+    <Content Include="Web-MyWebSite\.git\objects\5e\3d2aef9b702b9e65b02735b61ce48f9b63a9ec" />
+    <Content Include="Web-MyWebSite\.git\objects\61\15815e134b453ae37a3de8859bed0461c7f16d" />
+    <Content Include="Web-MyWebSite\.git\objects\76\27c6526c9c1b9545671a075ea6aa44355e7bb6" />
+    <Content Include="Web-MyWebSite\.git\objects\79\1f4b2040072e17a0e5ac958568a9e2108220ce" />
+    <Content Include="Web-MyWebSite\.git\objects\7a\94ab11e77e6c66f03eb84531dae4ad513672b3" />
+    <Content Include="Web-MyWebSite\.git\objects\93\ed9ab1a91863b8368270532c9788456c5350b3" />
+    <Content Include="Web-MyWebSite\.git\objects\b4\b33d0ed0635e69664c910e9164e8b7f7166883" />
+    <Content Include="Web-MyWebSite\.git\objects\be\212b4952636c15364a766529f36863fb8525a0" />
+    <Content Include="Web-MyWebSite\.git\objects\c6\9db8f0d563818fc43db7271c278f10cac5c4b6" />
+    <Content Include="Web-MyWebSite\.git\objects\cc\3f720efad09607b1f08bbb87f2a5219025c717" />
+    <Content Include="Web-MyWebSite\.git\objects\d7\6b3085f1c812158bfff168bee58e5414d9ad3e" />
+    <Content Include="Web-MyWebSite\.git\objects\df\b1b8e7c04c38be337a637eaa79688801d3975c" />
+    <Content Include="Web-MyWebSite\.git\objects\e2\1fa2467a02f8b47f355fd549258571c8081e80" />
+    <Content Include="Web-MyWebSite\.git\objects\e6\9de29bb2d1d6434b8b29ae775ad8c2e48c5391" />
+    <Content Include="Web-MyWebSite\.git\objects\e7\31ae74569f6cf7454fde3f6a9c120c18cb4ea4" />
+    <Content Include="Web-MyWebSite\.git\objects\ec\586efb56948b2a21a0403e248ba0a80c368fe2" />
+    <Content Include="Web-MyWebSite\.git\objects\f9\244e5e03e3c92493286ad54c85fe6d6658a53c" />
+    <Content Include="Web-MyWebSite\.git\objects\fa\99626262c88952b6e012b8c7010610e0e834fa" />
+    <Content Include="Web-MyWebSite\.git\refs\heads\Login" />
+    <Content Include="Web-MyWebSite\.git\refs\heads\master" />
+    <Content Include="Web-MyWebSite\.git\refs\remotes\origin\Login" />
+    <Content Include="Web-MyWebSite\.git\refs\remotes\origin\master" />
+    <Content Include="Web-AdminLogin\.git\COMMIT_EDITMSG" />
+    <Content Include="Web-AdminLogin\.git\config" />
+    <Content Include="Web-AdminLogin\.git\description" />
+    <Content Include="Web-AdminLogin\.git\HEAD" />
+    <Content Include="Web-AdminLogin\.git\hooks\applypatch-msg.sample" />
+    <Content Include="Web-AdminLogin\.git\hooks\commit-msg.sample" />
+    <Content Include="Web-AdminLogin\.git\hooks\fsmonitor-watchman.sample" />
+    <Content Include="Web-AdminLogin\.git\hooks\post-update.sample" />
+    <Content Include="Web-AdminLogin\.git\hooks\pre-applypatch.sample" />
+    <Content Include="Web-AdminLogin\.git\hooks\pre-commit.sample" />
+    <Content Include="Web-AdminLogin\.git\hooks\pre-merge-commit.sample" />
+    <Content Include="Web-AdminLogin\.git\hooks\pre-push.sample" />
+    <Content Include="Web-AdminLogin\.git\hooks\pre-rebase.sample" />
+    <Content Include="Web-AdminLogin\.git\hooks\pre-receive.sample" />
+    <Content Include="Web-AdminLogin\.git\hooks\prepare-commit-msg.sample" />
+    <Content Include="Web-AdminLogin\.git\hooks\push-to-checkout.sample" />
+    <Content Include="Web-AdminLogin\.git\hooks\update.sample" />
+    <Content Include="Web-AdminLogin\.git\index" />
+    <Content Include="Web-AdminLogin\.git\info\exclude" />
+    <Content Include="Web-AdminLogin\.git\logs\HEAD" />
+    <Content Include="Web-AdminLogin\.git\logs\refs\heads\master" />
+    <Content Include="Web-AdminLogin\.git\logs\refs\remotes\origin\master" />
+    <Content Include="Web-AdminLogin\.git\objects\12\98c4ac899894e5c11a740990d3b441de29469e" />
+    <Content Include="Web-AdminLogin\.git\objects\15\34a9f679a7dac02105672b7b29db7fefbafb0c" />
+    <Content Include="Web-AdminLogin\.git\objects\67\c6195a2b4d51f12c2267a8a0322f9b537878a1" />
+    <Content Include="Web-AdminLogin\.git\objects\c0\ca4b81d6b603dfb7c3e5e4f33d38b98c222e27" />
+    <Content Include="Web-AdminLogin\.git\objects\ce\9aa07add018845ea25d9612b283f56c4ceb151" />
+    <Content Include="Web-AdminLogin\.git\refs\heads\master" />
+    <Content Include="Web-AdminLogin\.git\refs\remotes\origin\master" />
+    <Content Include="Views\HomeView\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Web-AdminLogin\.git\objects\info\" />
+    <Folder Include="Web-AdminLogin\.git\objects\pack\" />
+    <Folder Include="Web-AdminLogin\.git\refs\tags\" />
+    <Folder Include="Web-MyWebSite\.git\objects\info\" />
+    <Folder Include="Web-MyWebSite\.git\objects\pack\" />
+    <Folder Include="Web-MyWebSite\.git\refs\tags\" />
+    <Folder Include="Web-MyWebSite\.vscode\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50079</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44379/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

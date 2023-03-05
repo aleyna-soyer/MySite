@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MySite.Controllers
 {
-    public class HomeViewController : Controller
+    public class HomePageController : Controller
     {
         // GET: HomeView
         public ActionResult Index()

@@ -1,0 +1,28 @@
+﻿@using MySite.Models.Classes
+@model List<HomePage>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Header</th>
+        <th>Poem</th>
+        <th>Name</th>
+        <th>Update</th>
+    </tr>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.ID</td>
+            <td>@i.Header</td>
+            <td>@i.Poem</td>
+            <td>@i.Name</td>
+            <td><a href="#" class="btn btn-primary">Update</a></td>
+        </tr>
+
+    }
+</table> 
+

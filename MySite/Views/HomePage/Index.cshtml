@@ -1,4 +1,5 @@
-﻿
+﻿@using MySite.Models.Classes
+@model List<HomePage>
 @{
     Layout = null;
 }
@@ -19,16 +20,18 @@
             <img src="~/Web-MyWebSite/haşim.jpg"
 
         </div>
-        <div class="conntent">
-            <h1>MERDİVEN</h1>
-            <br>
-            <p>
-                Sular sarardı... yüzün perde perde solmakta,
+        <div class="content">
+            @foreach (var i in Model)
+            {
+                <h1>@i.Header</h1>
                 <br>
-                Kızıl havâları seyret ki akşam olmakta...
-            </p>
-            <br>
-            <h3>Ahmet HAŞİM</h3>
+                <p>
+                    @i.Poem
+                </p>
+                <br>
+                <h3>@i.Name</h3>
+
+            }
         </div>
 
     </div>
